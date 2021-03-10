@@ -146,9 +146,7 @@
     ],
     "resetMocks": true
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.2.0"
   }
 }

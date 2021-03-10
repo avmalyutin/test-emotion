@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+
+import styled from '@emotion/styled'
+
+const ComponentStyled = styled.div`
+  background-color: blue;
+
+  &[data-placement*='top'] .nested-element-selector {
+    background-color: red;
+  }
+
+  --some-variable-here: 12pt;
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ComponentStyled data-placement='top'>
+        <div>
+          <span class="nested-element-selector">I am some text here</span>
+        </div>
+      </ComponentStyled>
     </div>
   );
 }
